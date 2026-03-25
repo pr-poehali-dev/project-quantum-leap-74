@@ -15,32 +15,43 @@ export function WorkSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Проекты
+            Проблема
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Избранные работы</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Кривая забывания Эббингауза</p>
+        </div>
+
+        <div
+          className={`mb-10 max-w-2xl transition-all duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+          style={{ transitionDelay: "150ms" }}
+        >
+          <p className="text-base leading-relaxed text-foreground/80 md:text-lg">
+            Немецкий психолог Эббингауз доказал: через час после заучивания мы помним только <span className="text-foreground font-medium">40% материала</span>, а через месяц — менее <span className="text-foreground font-medium">20%</span>. Без правильных повторений информация исчезает из памяти. Традиционная зубрёжка неэффективна.
+          </p>
         </div>
 
         <div className="space-y-6 md:space-y-8">
           {[
             {
               number: "01",
-              title: "ТехноСтарт",
-              category: "Корпоративный портал",
-              year: "2024",
+              title: "Через 20 минут",
+              category: "Остаётся в памяти ~58% материала",
+              year: "−42%",
               direction: "left",
             },
             {
               number: "02",
-              title: "АльфаТрейд",
-              category: "Финтех платформа",
-              year: "2024",
+              title: "Через 1 час",
+              category: "Остаётся в памяти ~44% материала",
+              year: "−56%",
               direction: "right",
             },
             {
               number: "03",
-              title: "МедиаПульс",
-              category: "Медиа сервис",
-              year: "2023",
+              title: "Через 1 месяц",
+              category: "Остаётся в памяти менее 20% материала",
+              year: "−80%",
               direction: "left",
             },
           ].map((project, i) => (
